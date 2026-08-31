@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aqua Flora — Culture hydroponique & AgriTech</title>
+<link rel="icon" type="image/png" href="assets/logo_invert.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -336,6 +337,30 @@ section{position:relative;}
 .info-list{list-style:none; padding:0; margin:36px 0 0; display:flex; flex-direction:column; gap:20px;}
 .info-list li{display:flex; gap:16px; font-size:14.5px;}
 .info-list b{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--aqua); min-width:110px; padding-top:2px;}
+.social-links{display:inline-flex; align-items:center; flex-wrap:wrap; gap:8px 10px;}
+.social-links a{
+  display:inline-block;
+  color:var(--ink);
+  font-weight:600;
+  text-decoration:none;
+  cursor:pointer;
+  background:linear-gradient(90deg,var(--forest) 0%, var(--leaf) 42%, var(--aqua) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  transition:transform .2s ease, filter .2s ease, opacity .2s ease;
+}
+.social-links a:hover,
+.social-links a:focus-visible{
+  transform:translateY(-1px);
+  filter:brightness(1.12);
+  text-decoration:none;
+  background:linear-gradient(90deg,#0F4C3A 0%, #1FAF5A 45%, #76D34C 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.social-links .separator{color:var(--ink-soft); opacity:.8;}
 form{display:flex; flex-direction:column; gap:20px;}
 .field-row{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
 label{font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:8px; display:block;}
@@ -708,7 +733,16 @@ footer{background:var(--forest-dark); color:rgba(246,244,236,.75); padding:70px 
       <ul class="info-list">
         <li><b>Adresse</b> Cité Sarkina tranche 01, Constantine, Algérie</li>
         <li><b>Email</b> aquaflora.spas@gmail.com</li>
-        <li><b>Réseaux</b> LinkedIn · Instagram · Facebook</li>
+        <li>
+          <b>Réseaux</b>
+          <span class="social-links">
+            <a href="https://www.linkedin.com/company/aqua-flora-spas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span class="separator" aria-hidden="true">·</span>
+            <a href="https://www.instagram.com/_aqua_flora/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <span class="separator" aria-hidden="true">·</span>
+            <a href="https://www.facebook.com/profile.php?id=61591550441641" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </span>
+        </li>
       </ul>
     </div>
     <form id="contactForm" class="reveal">
